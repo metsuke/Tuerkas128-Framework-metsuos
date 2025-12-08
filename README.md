@@ -18,3 +18,4 @@ Available games:
 _______________________________
 
 Created by RetroBensoft, 2025
+MIT License
