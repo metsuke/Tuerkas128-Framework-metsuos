@@ -31,7 +31,14 @@ A game written in Z80 assembly code for the ZX Spectrum 128k
 * The `_doc_` folder contains documentation.
 * The Tuerkas128 Framework core is within the `framework` folder. Some customization can be made by modifying `tuerkas128_constants.asm` and `tuerkas128_global.asm`, but any other file within this folder must not be changed unless you know exactly what you are doing.
 * The `framework\AY` folder is the sound tracker based upon the AY-3-8910/8912 specifications.
-* The `FSM` folder contains the code for controlling sprites, animated blocks and main char behaivour. The operation of animated blocks is hard-wired in the framework, but it can be customized using parameters. Sprites and main char can be fully controlled by programming their FSMs in assembly language using Tuerkas128 Framework data structures. FSM stands for Finite State Machine. 
+* The `FSM` folder contains the code for controlling animated blocks, sprites and main char behaviour. The operation of animated blocks is hard-wired in the framework, but it can be customized using parameters. Sprites and main char can be fully controlled by programming their FSMs in assembly language using Tuerkas128 Framework data structures. FSM stands for Finite State Machine.
+  * `tuerkas128_AB_types.asm` includes all types of animated blocks. If an animated block must have a particular parameter, it must have its own type. 
+  * `tuerkas128_AB_def_tables.asm` contains the parameters for every type of animated block. Two or more animated blocks of different type can share the same parameters. For instance, T128_ANIMBLK_STRINGR and T128_ANIMBLK_STRINGL. Or T128_ANIMBLK_SPIKETOP1 and T128_ANIMBLK_SPIKEBOT1.
+  * `tuerkas128_SPR_types.asm` includes all types of sprites. If a sprite must have a particular parameter, it must have its own type. 
+  * `tuerkas128_SPR_def_tables.asm` contains the parameters for every type of animated block. Two or more sprites of different type can share the same parameters. For instance, T128_SPRITE_SKELETON, T128_SPRITE_CYCLOP, T128_SPRITE_MINOTAURUS and T128_SPRITE_GRAIA. Or T128_SPRITE_DISCOBOLUS and T128_SPRITE_PEGASUS.
+  * `tuerkas128_SPR_classes.asm` are 
+* The `gamevars` folder contains the game variables and timers: energy, objects or anything your game needs.
+* The `graphics` folder contains bitmaps for animated blocks, sprites and main char.
 _______________________________
 
 Created by RetroBensoft, 2025
