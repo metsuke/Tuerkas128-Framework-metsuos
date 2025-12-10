@@ -37,8 +37,10 @@ A game written in Z80 assembly code for the ZX Spectrum 128k
   * `tuerkas128_SPR_types.asm` includes all types of sprites. 
   * `tuerkas128_SPR_def_tables.asm` contains the parameters for every type of sprite. Two or more sprites of different type can share the same parameters. For instance, T128_SPRITE_SKELETON, T128_SPRITE_CYCLOP, T128_SPRITE_MINOTAURUS and T128_SPRITE_GRAIA. Or T128_SPRITE_DISCOBOLUS and T128_SPRITE_PEGASUS.
   * `tuerkas128_SPR_classes.asm` contains every sprite class and the routines for its FSM. Sprite class 0 is reserved for _CHILD_ sprites. A class defines the way a sprite behaves using a routine written in assembly code. All sprites of the same class have the same behaviour (they have the same FSM routine). For instance, T128_SPRITE_SKELETON, T128_SPRITE_CYCLOP, T128_SPRITE_MINOTAURUS, T128_SPRITE_GRAIA, T128_SPRITE_DWARF and T128_SPRITE_CYCLOP belongs to the class SPR_ClassWalker (the relation between sprite type and sprite class is defined in `tuerkas128_SPR_def_tables.asm`), and the routine SPR_FSM_Walker is called once every game-loop iteration to control the behaviour of sprites of class SPR_ClassWalker. There are two other routines associated to a sprite class which are called when the sprite is spawned and they can be used to init sprite parameters. For instance, the routines for the class SPR_ClassWalker are SPR_FSM_WalkerIS and SPR_FSM_WalkerIS2.
-* The `gamevars` folder contains the game variables and timers: energy, objects or anything your game needs.
-* The `graphics` folder contains bitmaps for animated blocks, sprites and main char.
+  * `tuerkas128_SPR_routines.asm` is used to include the asm libraries containing the routines associated to every sprite class. If 13 classes are defined in `tuerkas128_SPR_classes.asm`, then 13 libraries mus be included in `tuerkas128_SPR_routines.asm`. 
+  * The `fsm\SPR` folder contains the libraries defined in `tuerkas128_SPR_routines.asm`. In addition, there are two framework files that must not be modified or deleted: tuerkas128_spr_CHILD_.asm and tuerkas128_spr_MAINCHAR_.asm. So that, If 13 classes are defined in `tuerkas128_SPR_classes.asm`, the folder `fsm\SPR` must contain 15 files.
+* The `gamevars` folder contains the game variables and timers. For instance: energy, collected objects or anything your game needs.
+* The `graphics` folder contains the bitmaps for animated blocks, sprites and main char.
 _______________________________
 
 Created by RetroBensoft, 2025
