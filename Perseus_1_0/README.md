@@ -45,9 +45,9 @@ A game written in Z80 assembly code for the ZX Spectrum 128k
   * The `fsm\MAINCHAR\` folder must contain a file called tuerkas128_spr_FSM.asm. You must use this file to define the behaviour of the main char: walk, jump, punch, fire and any other action you want. The framework does not provided any default action for the main char. They are coded from scratch in assembly language in this file. The framework only provides data structures and basic routines to make things easier, but not too easy.
   * The `fsm\AB\` folder contains framework files which must not be modified or deleted. There are one file for every animated block class. The framework has 5 predefined animated block classes.
   
-* The `gamevars` folder contains the game variables and timers. For instance: energy, collected objects or anything your game needs.
+* The `gamevars\` folder contains the game variables and timers. For instance: energy, collected objects or anything your game needs.
   
-* The `graphics` folder contains the bitmaps for animated blocks, sprites and main char.
+* The `graphics\` folder contains the bitmaps for animated blocks, sprites and main char.
 _______________________________
 
 Created by RetroBensoft, 2025
