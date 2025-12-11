@@ -3,7 +3,7 @@
 A game written in Z80 assembly code for the ZX Spectrum 128k
 
 ### Requirements
-* Windows 10/11 (I'm pretty sure a Lixux version is easy to implement)
+* Windows 10/11 (I'm pretty sure a Linux version is easy to implement)
 * pasmo.exe and gentape.exe folders must be in Windows PATH variable
 
 ### Development tools
