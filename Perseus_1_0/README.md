@@ -50,6 +50,9 @@ A game written in Z80 assembly code for the ZX Spectrum 128k
 * The `graphics\` folder contains the bitmaps for animated blocks, sprites and main char.
   * The `tuerkas128_ab_bitmaps.asm` file must contain a lookup table with as much elements as animated block types. Every entry in this table is pointer to an animated block bitmap (an its size in bytes). Two or more animated blocks of different type can share the same bitmap. For instance, T128_ANIMBLK_SPIKETOP1 and T128_ANIMBLK_SPIKETOP2. Or T128_ANIMBLK_SPIKEBOT1 and T128_ANIMBLK_SPIKEBOT2.
   * The `tuerkas128_spr_bitmaps.asm` file must contain a lookup table with as much elements as sprite types. Every entry in this table is pointer to a sprite bitmap (an its size in bytes). Two or more sprites of different type can share the same bitmap. No examples here.
+  * The `graphics\AB\` folder contains the bitmaps included in `tuerkas128_ab_bitmaps.asm`.
+  * The `graphics\SPR\` folder contains the bitmaps included in `tuerkas128_spr_bitmaps.asm`.
+  * The `graphics\MAINCHAR\` folder must containt a file `tuerkas128_spr_bitmap` with the bitmap of the main char. [SPOILERS AHEAD] 
 _______________________________
 
 Created by RetroBensoft, 2025
