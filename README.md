@@ -1,6 +1,6 @@
 # Tuerkas128 Framework
 
-Tuerkas128 Framework is a set of Z80 assembler libraries for developing games for the ZX Spectrum 128k. You can use it:
+Tuerkas128 Framework is a set of Z80 assembly libraries for developing games for the ZX Spectrum 128k. You can use it:
 * for study purposes
 * to make mods of the orginal games
 * to improve and optimize the code
