@@ -13,7 +13,7 @@ Tutorials are available at https://www.youtube.com/@RetroBensoft (only in spanis
 Instead of publishing the framework raw code, the complete code of the games developed by RetroBensoft with Tukeras128 Framework is shared here. Real examples are provided, so that it is much easier to understand the framework.
 
 Available games:
-* Perseus (2025)  
+* [Perseus](https://github.com/RetroBensoft/Tuerkas128-Framework/tree/main/Perseus_1_0) (2025)  
 
 _______________________________
 
