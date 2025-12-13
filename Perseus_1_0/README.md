@@ -46,7 +46,7 @@ Available in [itchio](https://retrobensoft.itch.io/perseus)
   * The `fsm\MAINCHAR\` folder must contain a file called tuerkas128_spr_FSM.asm. This filemust be used to define the behaviour of the main char: walk, jump, punch, fire or whatever any other action is needed. The framework does not provided any default action for the main char. They must be coded from scratch in assembly language in this file. The framework only provides data structures and basic routines to make things easier, but not too easy.
   * The `fsm\AB\` folder contains framework files which must not be modified or deleted. There is one file for every animated block class. The framework has 5 predefined animated block classes.
   
-* The `gamevars\` folder contains the game variables and timers. For instance: energy, collected objects or any other variable that the game needs to take into account.
+* The `gamevars\` folder contains the game variables and timers. For instance: energy, collected objects or any other variable that the game needs to take into account. It also defines which game variables are updated on the scoreboard. The parameter type of GameVar is an important one. It is used to call the appropriate GameVar rendering routine included in the folder `scoreboard\`.
   
 * The `graphics\` folder contains the bitmaps for animated blocks, sprites and main char.
   * The `tuerkas128_ab_bitmaps.asm` file must contain a lookup table with as much elements as animated block types are defined at `fsm\tuerkas128_AB_types.asm`. Every entry in this table is pointer to an animated block bitmap (an its size in bytes). Two or more animated blocks of different type could share the same bitmap. For instance, T128_ANIMBLK_SPIKETOP1 and T128_ANIMBLK_SPIKETOP2. Or T128_ANIMBLK_SPIKEBOT1 and T128_ANIMBLK_SPIKEBOT2.
@@ -55,7 +55,12 @@ Available in [itchio](https://retrobensoft.itch.io/perseus)
   * The `graphics\SPR\` folder contains the bitmaps included in `tuerkas128_spr_bitmaps.asm`.
   * The `graphics\MAINCHAR\` folder must containt a file `tuerkas128_spr_bitmap.asm` with the bitmap of the main char. **SPOILERS AHEAD** Perseus includes two extra files here: one for the bitmap of Perseus himself and another one for the bitmpa of the unexpected appearance of Medusa.
  
-* The `intro_menu\` folder contains all the files the game needs for the intro and the menu. These files must be included in the file `bank_S1.asm`, in the root directory. The only requirement for the intro and menu files is that a PUBLIC routine named +T128_IntroBS1+ must exists in one of this files. This routine is called right after the game is loaded. The framework does not provided code for creating the intro or the menu. All of it must be coded in assembly language from scratch by the author. Perseus, for instance, includes in this folder the file `tuerkas128_code_text.asm` with routines for printing text on screen.
+* The `intro_menu\` folder contains all the files the game needs for the intro and the menu. These files must be included in the file `bank_S1.asm`, in the root directory. The only requirement for the intro and menu files is that a PUBLIC routine named *T128_IntroBS1* must exists in one of this files. This routine is called right after the game is loaded. The framework does not provided code for creating the intro or the menu. All of it must be coded in assembly language from scratch. Perseus, for instance, includes in this folder the file `tuerkas128_code_text.asm` with routines for printing text on screen.
+
+* The `scoreboard\` folder must contain a file `tuerkas128_SB_routines.asm`. This file must contain a lookup table for every scoreboard type. Perseus has 3 scoreboard types:
+  * DIGIT: It displays a variable by printing a number (for instance, number of coins, or number of knives)
+  * BAR:  It displays a variable by rendering a bar (for instance, energy)
+  * ICON: It displays an on/off variable (for instance, invisibility or speed up)
   
 _______________________________
 
