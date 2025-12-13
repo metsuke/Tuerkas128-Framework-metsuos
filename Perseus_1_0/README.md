@@ -25,7 +25,7 @@ Available in [itchio](https://retrobensoft.itch.io/perseus)
 * Run `makefile_win.bat` from the Windows command prompt to generate the `perseus.tap` file.
 * `makefile_win.bat` uses PASMO to assembly the code, `makefile_win.ps1` (Windows PowerShell) to generate `loader.asm` from `loader_template.asm`, and GENTAPE to produce `perseus.tap`.
 * Main code is in `bank_2.asm`. If you want to dive into the code you can start from here.
-* If you want to master Tuerkas128 Framework, a good way to start with is by doing mods. The easiest mod is customizing screens. Blocks and superblocks definitions are in the `screens` folder. Game map is defined in the `screens` folder as well. Map size is defined by parameter T128_SCREEN_ROW_1 located at `framework\tuerkas128_constants.asm`.
+* If you want to master Tuerkas128 Framework, a good way to start with is by doing mods. The easiest mod is customizing screens. Blocks and superblocks definitions are in the `screens` folder. Game map is defined in the `screens` folder as well. Map shape is a rectangle and its size is defined by parameter T128_SCREEN_ROW_1 located at `framework\tuerkas128_constants.asm`. In Perseus, T128_SCREEN_ROW_1 is set to %00010000 (16), which means that the map could be 16 screens wide by 16 screens high. So the map could be made up of 256 screens, although Perseus only has 144 (16 wide by 8 high).
 * Tutorials are available in [YouTube](https://www.youtube.com/@RetroBensoft) (only in spanish, sorry)
 
 ### Project content
