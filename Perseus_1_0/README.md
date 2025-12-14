@@ -100,6 +100,11 @@ Available in [itchio](https://retrobensoft.itch.io/perseus)
   * ICON: It displays an on/off variable (for instance, invisibility or speed up)
   
   The framework does not include code to render the scoreboard, so it must be written for a specific game. The values defined in the SB_RenderRoutines lookup table are the addresses of the assembly routine that renders every piece of scoreboard. There is a file in `scoreboard\` for every scoreboard type. Every file implements its routine. These files must be included at the of the file `framework\tuerkas128_code_scoreboard.asm`.
+
+* The `screens\` folder must contains 3 files:
+  * `tuerkas128_scr_blocks.asm`: the definition of the blocks (tiles)
+  * `tuerkas128_scr_superblocks.asm`: the definition of the superblocks (a suet of blocks)
+  * `tuerkas128_scr_map.asm`: the definition of the screens (usiing blocks, superblocks, animated blocks, sprites, screen areas, breath areas and portals)
   
 _______________________________
 
