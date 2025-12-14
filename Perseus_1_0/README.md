@@ -33,7 +33,17 @@ Available in [itchio](https://retrobensoft.itch.io/perseus)
   
 * The Tuerkas128 Framework core is within the `framework\` folder. Some customization can be made by modifying `tuerkas128_constants.asm` and `tuerkas128_global.asm`, but any other file within this folder must not be changed unless you know exactly what you are doing.
   
-* The `framework\AY\` folder is the sound tracker based upon the AY-3-8910/8912 specifications.
+* The `framework\AY\` folder is the sound tracker based upon the AY-3-8910/8912 specifications. Read the first lines of `framework\AY\tuerkas128_AY_player_code.asm` to learn how to implement different actions of the sound tracker:
+  * Enable music
+  * Disable music
+  * Enable FX
+  * Disable Fx
+  * Init a song (from bank 2, 0 and BS1)
+  * Init an FX (from bank 2, 0 and BS1)
+  * Stop music
+  * Play music
+  * Stop FX
+  * Play FX
   
 * The `fsm\` folder contains the code for controlling animated blocks, sprites and main char behaviour. The operation of animated blocks is hard-wired in the framework, but it can be customized using parameters. Sprites and main char can be fully controlled by programming their FSMs in assembly language with the help of Tuerkas128 Framework data structures. FSM stands for Finite State Machine.
   * `tuerkas128_AB_types.asm` is used for defining all types of animated blocks.
@@ -105,6 +115,13 @@ Available in [itchio](https://retrobensoft.itch.io/perseus)
   * `tuerkas128_scr_blocks.asm`: the definition of the blocks (tiles)
   * `tuerkas128_scr_superblocks.asm`: the definition of the superblocks (a set of blocks)
   * `tuerkas128_scr_map.asm`: the definition of the screens (usiing blocks, superblocks, animated blocks, sprites, screen areas, breath areas and portals)
+ 
+* The `sound\` folder must contains 5 files:
+  * `tuerkas128_AY_constants.asm`: the index numbers for every FX and song
+  * `tuerkas128_AY_orn_arp.asm`: the definition of apeggios and ornaments
+  * `tuerkas128_AY_instruments.asm`: the definition of the instruments used in the FX & music
+  * `tuerkas128_AY_FX.asm`: the definition of every FX
+  * `tuerkas128_AY_music.asm`: the definition of every song
   
 _______________________________
 
