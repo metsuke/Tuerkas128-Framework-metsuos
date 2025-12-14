@@ -90,7 +90,7 @@ Available in [itchio](https://retrobensoft.itch.io/perseus)
 
     <img width="1037" height="783" alt="image" src="https://github.com/user-attachments/assets/edaa7192-5b0a-4f7b-835b-59c2e185ad28" />
 
-  * `tuerkas128_data_tukers.asm` bitmap for the walking Tuerkas in the intro
+  * `tuerkas128_data_tuerkas.asm` bitmap for the walking Tuerkas in the intro
       
     <img width="298" height="657" alt="image" src="https://github.com/user-attachments/assets/9259cd89-6353-4379-87fb-4f13c4dffc32" />
 
