@@ -118,7 +118,7 @@ Available in [itchio](https://retrobensoft.itch.io/perseus)
  
 * The `sound\` folder must contains 5 files:
   * `tuerkas128_AY_constants.asm`: the index numbers for every FX and song
-  * `tuerkas128_AY_orn_arp.asm`: the definition of apeggios and ornaments
+  * `tuerkas128_AY_orn_arp.asm`: the definition of arpeggios and ornaments
   * `tuerkas128_AY_instruments.asm`: the definition of the instruments used in the FX & music
   * `tuerkas128_AY_FX.asm`: the definition of every FX
   * `tuerkas128_AY_music.asm`: the definition of every song
