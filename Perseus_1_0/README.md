@@ -21,6 +21,9 @@ Available in [itchio](https://retrobensoft.itch.io/perseus)
 * Ramón Fernández Ameijeiras (sinclair joystick tester)
 * David Gonzalo aka Z80user (code optimization for the loader)
 
+### Dedicated to
+Sara & Susana
+
 ### Notes
 * Run `makefile_win.bat` from the Windows command prompt to generate the `perseus.tap` file.
 * `makefile_win.bat` uses PASMO to assembly the code, `makefile_win.ps1` (Windows PowerShell) to generate `loader.asm` from `loader_template.asm`, and GENTAPE to produce `perseus.tap`.
