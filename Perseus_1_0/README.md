@@ -59,10 +59,11 @@ Sara & Susana
   * The `fsm\SPR\` folder contains the libraries defined in `tuerkas128_SPR_routines.asm`. In addition, there are two framework files that must not be modified or deleted: tuerkas128_spr_CHILD_.asm and tuerkas128_spr_MAINCHAR_.asm. So that, if 13 classes are defined in `tuerkas128_SPR_classes.asm`, the folder `fsm\SPR\` must contain 15 files.
   * The `fsm\MAINCHAR\` folder must contain a file called tuerkas128_spr_FSM.asm. This file defines the behaviour of the main char: walk, jump, punch, fire or whatever any other action is needed. The framework does not provided any default action for the main char. They must be coded from scratch in assembly language in this file. The framework only provides data structures and basic routines to make things easier, but not too easy.
 
-    This is the most complex piece of code in Perseus, excluding framework routines. It is programmed using the finite state machine paradigm. It is complex for two reasons:
+    This is the most complex piece of code in Perseus, excluding framework core routines. It is programmed using the finite state machine paradigm. It is complex for two reasons:
     1. Perseus has 40 states
-    2. There's a lot of state changes to provide all the actions that the main char can do.
+    2. There's a lot of state transitions to provide all the actions that the main char can do.
   
+    Read `_doc_\perseus_FSM.ods` to learn all the states and all the states transitions.
     Despite the complexity, it would be much more complex if the FSM paradigm were not used. So I strongly recomend to use this paradigm to code highly elaborated behaviours.
   * The `fsm\AB\` folder contains framework files which must not be modified or deleted. There is one file for every animated block class. The framework has 5 predefined animated block classes.
   
